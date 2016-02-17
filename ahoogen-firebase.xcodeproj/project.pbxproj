@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C05AA07E87910B20781BEA5 /* Pods_ahoogen_firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB906BA60C3E1AC2F7A9F856 /* Pods_ahoogen_firebase.framework */; };
+		191ABB5B1C746D8800A8A2DF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABB5A1C746D8800A8A2DF /* DataService.swift */; };
 		19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */; };
 		19754F601C7444E100AD1EE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F5F1C7444E100AD1EE0 /* ViewController.swift */; };
 		19754F631C7444E100AD1EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19754F611C7444E100AD1EE0 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191ABB5A1C746D8800A8A2DF /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		19754F5A1C7444E100AD1EE0 /* ahoogen-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ahoogen-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19754F5F1C7444E100AD1EE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191ABB591C746D7A00A8A2DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				191ABB5A1C746D8800A8A2DF /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		19754F511C7444E100AD1EE0 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		19754F5C1C7444E100AD1EE0 /* ahoogen-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				191ABB591C746D7A00A8A2DF /* Services */,
 				19754F841C745A0100AD1EE0 /* Frameworks */,
 				19754F7D1C7448AF00AD1EE0 /* Util */,
 				19754F7A1C74451F00AD1EE0 /* Model */,
@@ -93,9 +104,7 @@
 				19754F781C74451400AD1EE0 /* Controller */,
 				19754F6F1C7444EE00AD1EE0 /* Resources */,
 				19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */,
-				19754F5F1C7444E100AD1EE0 /* ViewController.swift */,
 				19754F641C7444E100AD1EE0 /* Assets.xcassets */,
-				19754F661C7444E100AD1EE0 /* LaunchScreen.storyboard */,
 				19754F691C7444E100AD1EE0 /* Info.plist */,
 			);
 			path = "ahoogen-firebase";
@@ -115,6 +124,7 @@
 		19754F781C74451400AD1EE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				19754F5F1C7444E100AD1EE0 /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -122,6 +132,7 @@
 		19754F791C74451A00AD1EE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19754F661C7444E100AD1EE0 /* LaunchScreen.storyboard */,
 				19754F611C7444E100AD1EE0 /* Main.storyboard */,
 				19754F7B1C74487700AD1EE0 /* MaterialView.swift */,
 				19754F801C744DF300AD1EE0 /* MaterialButton.swift */,
@@ -207,7 +218,7 @@
 				TargetAttributes = {
 					19754F591C7444E100AD1EE0 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 564A658LU3;
+						DevelopmentTeam = 6X9MR4D2AJ;
 					};
 				};
 			};
@@ -300,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19754F831C7451D900AD1EE0 /* MaterialTextField.swift in Sources */,
+				191ABB5B1C746D8800A8A2DF /* DataService.swift in Sources */,
 				19754F7C1C74487700AD1EE0 /* MaterialView.swift in Sources */,
 				19754F601C7444E100AD1EE0 /* ViewController.swift in Sources */,
 				19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */,
