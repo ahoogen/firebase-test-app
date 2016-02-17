@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0C05AA07E87910B20781BEA5 /* Pods_ahoogen_firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB906BA60C3E1AC2F7A9F856 /* Pods_ahoogen_firebase.framework */; };
 		191ABB5B1C746D8800A8A2DF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABB5A1C746D8800A8A2DF /* DataService.swift */; };
-		191ABB5D1C7483B300A8A2DF /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABB5C1C7483B300A8A2DF /* LoggedInVC.swift */; };
 		19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */; };
 		19754F601C7444E100AD1EE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F5F1C7444E100AD1EE0 /* ViewController.swift */; };
 		19754F631C7444E100AD1EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19754F611C7444E100AD1EE0 /* Main.storyboard */; };
@@ -26,11 +25,12 @@
 		19754F881C745A3400AD1EE0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19754F851C745A3400AD1EE0 /* Bolts.framework */; };
 		19754F891C745A3400AD1EE0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19754F861C745A3400AD1EE0 /* FBSDKCoreKit.framework */; };
 		19754F8A1C745A3400AD1EE0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19754F871C745A3400AD1EE0 /* FBSDKLoginKit.framework */; };
+		19A026B51C748F880024A8FE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A026B41C748F880024A8FE /* FeedVC.swift */; };
+		19A026B71C7490960024A8FE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A026B61C7490960024A8FE /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		191ABB5A1C746D8800A8A2DF /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		191ABB5C1C7483B300A8A2DF /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
 		19754F5A1C7444E100AD1EE0 /* ahoogen-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ahoogen-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19754F5F1C7444E100AD1EE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		19754F851C745A3400AD1EE0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		19754F861C745A3400AD1EE0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		19754F871C745A3400AD1EE0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		19A026B41C748F880024A8FE /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		19A026B61C7490960024A8FE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		629947DE380A4E84B45757CB /* Pods-ahoogen-firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahoogen-firebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-ahoogen-firebase/Pods-ahoogen-firebase.release.xcconfig"; sourceTree = "<group>"; };
 		A124A32B3E4C4E13B1265588 /* Pods-ahoogen-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahoogen-firebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ahoogen-firebase/Pods-ahoogen-firebase.debug.xcconfig"; sourceTree = "<group>"; };
 		BB906BA60C3E1AC2F7A9F856 /* Pods_ahoogen_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ahoogen_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				19754F5F1C7444E100AD1EE0 /* ViewController.swift */,
-				191ABB5C1C7483B300A8A2DF /* LoggedInVC.swift */,
+				19A026B41C748F880024A8FE /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -140,6 +142,7 @@
 				19754F7B1C74487700AD1EE0 /* MaterialView.swift */,
 				19754F801C744DF300AD1EE0 /* MaterialButton.swift */,
 				19754F821C7451D900AD1EE0 /* MaterialTextField.swift */,
+				19A026B61C7490960024A8FE /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,12 +316,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A026B51C748F880024A8FE /* FeedVC.swift in Sources */,
 				19754F831C7451D900AD1EE0 /* MaterialTextField.swift in Sources */,
 				191ABB5B1C746D8800A8A2DF /* DataService.swift in Sources */,
 				19754F7C1C74487700AD1EE0 /* MaterialView.swift in Sources */,
 				19754F601C7444E100AD1EE0 /* ViewController.swift in Sources */,
+				19A026B71C7490960024A8FE /* PostCell.swift in Sources */,
 				19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */,
-				191ABB5D1C7483B300A8A2DF /* LoggedInVC.swift in Sources */,
 				19754F7F1C7448BC00AD1EE0 /* Contsants.swift in Sources */,
 				19754F811C744DF300AD1EE0 /* MaterialButton.swift in Sources */,
 			);
