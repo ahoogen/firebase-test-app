@@ -12,6 +12,14 @@
 		19754F631C7444E100AD1EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19754F611C7444E100AD1EE0 /* Main.storyboard */; };
 		19754F651C7444E100AD1EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19754F641C7444E100AD1EE0 /* Assets.xcassets */; };
 		19754F681C7444E100AD1EE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19754F661C7444E100AD1EE0 /* LaunchScreen.storyboard */; };
+		19754F741C74450300AD1EE0 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19754F701C74450300AD1EE0 /* NotoSans-Bold.ttf */; };
+		19754F751C74450300AD1EE0 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19754F711C74450300AD1EE0 /* NotoSans-BoldItalic.ttf */; };
+		19754F761C74450300AD1EE0 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19754F721C74450300AD1EE0 /* NotoSans-Italic.ttf */; };
+		19754F771C74450300AD1EE0 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19754F731C74450300AD1EE0 /* NotoSans-Regular.ttf */; };
+		19754F7C1C74487700AD1EE0 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F7B1C74487700AD1EE0 /* MaterialView.swift */; };
+		19754F7F1C7448BC00AD1EE0 /* Contsants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F7E1C7448BC00AD1EE0 /* Contsants.swift */; };
+		19754F811C744DF300AD1EE0 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F801C744DF300AD1EE0 /* MaterialButton.swift */; };
+		19754F831C7451D900AD1EE0 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F821C7451D900AD1EE0 /* MaterialTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		19754F641C7444E100AD1EE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19754F671C7444E100AD1EE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19754F691C7444E100AD1EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19754F701C74450300AD1EE0 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		19754F711C74450300AD1EE0 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		19754F721C74450300AD1EE0 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		19754F731C74450300AD1EE0 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		19754F7B1C74487700AD1EE0 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		19754F7E1C7448BC00AD1EE0 /* Contsants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contsants.swift; sourceTree = "<group>"; };
+		19754F801C744DF300AD1EE0 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		19754F821C7451D900AD1EE0 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,62 @@
 		19754F5C1C7444E100AD1EE0 /* ahoogen-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				19754F7D1C7448AF00AD1EE0 /* Util */,
+				19754F7A1C74451F00AD1EE0 /* Model */,
+				19754F791C74451A00AD1EE0 /* View */,
+				19754F781C74451400AD1EE0 /* Controller */,
+				19754F6F1C7444EE00AD1EE0 /* Resources */,
 				19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */,
 				19754F5F1C7444E100AD1EE0 /* ViewController.swift */,
-				19754F611C7444E100AD1EE0 /* Main.storyboard */,
 				19754F641C7444E100AD1EE0 /* Assets.xcassets */,
 				19754F661C7444E100AD1EE0 /* LaunchScreen.storyboard */,
 				19754F691C7444E100AD1EE0 /* Info.plist */,
 			);
 			path = "ahoogen-firebase";
+			sourceTree = "<group>";
+		};
+		19754F6F1C7444EE00AD1EE0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19754F701C74450300AD1EE0 /* NotoSans-Bold.ttf */,
+				19754F711C74450300AD1EE0 /* NotoSans-BoldItalic.ttf */,
+				19754F721C74450300AD1EE0 /* NotoSans-Italic.ttf */,
+				19754F731C74450300AD1EE0 /* NotoSans-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19754F781C74451400AD1EE0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		19754F791C74451A00AD1EE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19754F611C7444E100AD1EE0 /* Main.storyboard */,
+				19754F7B1C74487700AD1EE0 /* MaterialView.swift */,
+				19754F801C744DF300AD1EE0 /* MaterialButton.swift */,
+				19754F821C7451D900AD1EE0 /* MaterialTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		19754F7A1C74451F00AD1EE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		19754F7D1C7448AF00AD1EE0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				19754F7E1C7448BC00AD1EE0 /* Contsants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +186,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19754F741C74450300AD1EE0 /* NotoSans-Bold.ttf in Resources */,
 				19754F681C7444E100AD1EE0 /* LaunchScreen.storyboard in Resources */,
+				19754F751C74450300AD1EE0 /* NotoSans-BoldItalic.ttf in Resources */,
+				19754F761C74450300AD1EE0 /* NotoSans-Italic.ttf in Resources */,
 				19754F651C7444E100AD1EE0 /* Assets.xcassets in Resources */,
 				19754F631C7444E100AD1EE0 /* Main.storyboard in Resources */,
+				19754F771C74450300AD1EE0 /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19754F831C7451D900AD1EE0 /* MaterialTextField.swift in Sources */,
+				19754F7C1C74487700AD1EE0 /* MaterialView.swift in Sources */,
 				19754F601C7444E100AD1EE0 /* ViewController.swift in Sources */,
 				19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */,
+				19754F7F1C7448BC00AD1EE0 /* Contsants.swift in Sources */,
+				19754F811C744DF300AD1EE0 /* MaterialButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
