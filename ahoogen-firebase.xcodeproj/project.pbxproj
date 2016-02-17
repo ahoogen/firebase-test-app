@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C05AA07E87910B20781BEA5 /* Pods_ahoogen_firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB906BA60C3E1AC2F7A9F856 /* Pods_ahoogen_firebase.framework */; };
 		19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */; };
 		19754F601C7444E100AD1EE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F5F1C7444E100AD1EE0 /* ViewController.swift */; };
 		19754F631C7444E100AD1EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19754F611C7444E100AD1EE0 /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 		19754F7F1C7448BC00AD1EE0 /* Contsants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F7E1C7448BC00AD1EE0 /* Contsants.swift */; };
 		19754F811C744DF300AD1EE0 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F801C744DF300AD1EE0 /* MaterialButton.swift */; };
 		19754F831C7451D900AD1EE0 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F821C7451D900AD1EE0 /* MaterialTextField.swift */; };
+		19754F881C745A3400AD1EE0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19754F851C745A3400AD1EE0 /* Bolts.framework */; };
+		19754F891C745A3400AD1EE0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19754F861C745A3400AD1EE0 /* FBSDKCoreKit.framework */; };
+		19754F8A1C745A3400AD1EE0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19754F871C745A3400AD1EE0 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,12 @@
 		19754F7E1C7448BC00AD1EE0 /* Contsants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contsants.swift; sourceTree = "<group>"; };
 		19754F801C744DF300AD1EE0 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		19754F821C7451D900AD1EE0 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		19754F851C745A3400AD1EE0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		19754F861C745A3400AD1EE0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		19754F871C745A3400AD1EE0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		629947DE380A4E84B45757CB /* Pods-ahoogen-firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahoogen-firebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-ahoogen-firebase/Pods-ahoogen-firebase.release.xcconfig"; sourceTree = "<group>"; };
+		A124A32B3E4C4E13B1265588 /* Pods-ahoogen-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahoogen-firebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ahoogen-firebase/Pods-ahoogen-firebase.debug.xcconfig"; sourceTree = "<group>"; };
+		BB906BA60C3E1AC2F7A9F856 /* Pods_ahoogen_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ahoogen_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19754F881C745A3400AD1EE0 /* Bolts.framework in Frameworks */,
+				19754F891C745A3400AD1EE0 /* FBSDKCoreKit.framework in Frameworks */,
+				19754F8A1C745A3400AD1EE0 /* FBSDKLoginKit.framework in Frameworks */,
+				0C05AA07E87910B20781BEA5 /* Pods_ahoogen_firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +70,8 @@
 			children = (
 				19754F5C1C7444E100AD1EE0 /* ahoogen-firebase */,
 				19754F5B1C7444E100AD1EE0 /* Products */,
+				D6E85FE2C18619F70E6693B7 /* Pods */,
+				476763035C13AC22FEA0C921 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +86,7 @@
 		19754F5C1C7444E100AD1EE0 /* ahoogen-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				19754F841C745A0100AD1EE0 /* Frameworks */,
 				19754F7D1C7448AF00AD1EE0 /* Util */,
 				19754F7A1C74451F00AD1EE0 /* Model */,
 				19754F791C74451A00AD1EE0 /* View */,
@@ -128,6 +145,33 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		19754F841C745A0100AD1EE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19754F851C745A3400AD1EE0 /* Bolts.framework */,
+				19754F861C745A3400AD1EE0 /* FBSDKCoreKit.framework */,
+				19754F871C745A3400AD1EE0 /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		476763035C13AC22FEA0C921 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB906BA60C3E1AC2F7A9F856 /* Pods_ahoogen_firebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6E85FE2C18619F70E6693B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A124A32B3E4C4E13B1265588 /* Pods-ahoogen-firebase.debug.xcconfig */,
+				629947DE380A4E84B45757CB /* Pods-ahoogen-firebase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19754F6C1C7444E100AD1EE0 /* Build configuration list for PBXNativeTarget "ahoogen-firebase" */;
 			buildPhases = (
+				9218DACF834B827AAA077ECD /* Check Pods Manifest.lock */,
 				19754F561C7444E100AD1EE0 /* Sources */,
 				19754F571C7444E100AD1EE0 /* Frameworks */,
 				19754F581C7444E100AD1EE0 /* Resources */,
+				1B70D01A8B4D5A5DBF757F46 /* Embed Pods Frameworks */,
+				13E5F37E98D0DD0DDD0080ED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +207,7 @@
 				TargetAttributes = {
 					19754F591C7444E100AD1EE0 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 564A658LU3;
 					};
 				};
 			};
@@ -197,6 +245,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13E5F37E98D0DD0DDD0080ED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ahoogen-firebase/Pods-ahoogen-firebase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B70D01A8B4D5A5DBF757F46 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ahoogen-firebase/Pods-ahoogen-firebase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9218DACF834B827AAA077ECD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19754F561C7444E100AD1EE0 /* Sources */ = {
@@ -319,23 +415,39 @@
 		};
 		19754F6D1C7444E100AD1EE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A124A32B3E4C4E13B1265588 /* Pods-ahoogen-firebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ahoogen-firebase",
+				);
 				INFOPLIST_FILE = "ahoogen-firebase/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.therombrewing.ahoogen-firebase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		19754F6E1C7444E100AD1EE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 629947DE380A4E84B45757CB /* Pods-ahoogen-firebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ahoogen-firebase",
+				);
 				INFOPLIST_FILE = "ahoogen-firebase/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.therombrewing.ahoogen-firebase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -358,6 +470,7 @@
 				19754F6E1C7444E100AD1EE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
