@@ -17,7 +17,13 @@ let SHADOW_RADIUS: CGFloat = 5.0
 let SHADOW_OFFSET_WIDTH: CGFloat = 0.0
 let SHADOW_OFFSET_HEIGHT: CGFloat = 2.0
 let TEXTFIELD_BORDER_ALPHA: CGFloat = 0.1
+
+// Keys
 let KEY_UID = "uid"
 
 // Segues
 let SEGUE_LOGGED_IN = "LoggedIn"
+
+// Status codes
+let STATUS_ACCOUNT_NONEXIST = -8
+let STATUS_INVALID_PASSWORD = -6

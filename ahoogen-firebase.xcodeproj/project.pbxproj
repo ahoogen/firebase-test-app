@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C05AA07E87910B20781BEA5 /* Pods_ahoogen_firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB906BA60C3E1AC2F7A9F856 /* Pods_ahoogen_firebase.framework */; };
 		191ABB5B1C746D8800A8A2DF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABB5A1C746D8800A8A2DF /* DataService.swift */; };
+		191ABB5D1C7483B300A8A2DF /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABB5C1C7483B300A8A2DF /* LoggedInVC.swift */; };
 		19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */; };
 		19754F601C7444E100AD1EE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19754F5F1C7444E100AD1EE0 /* ViewController.swift */; };
 		19754F631C7444E100AD1EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19754F611C7444E100AD1EE0 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		191ABB5A1C746D8800A8A2DF /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		191ABB5C1C7483B300A8A2DF /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
 		19754F5A1C7444E100AD1EE0 /* ahoogen-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ahoogen-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19754F5D1C7444E100AD1EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19754F5F1C7444E100AD1EE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				19754F5F1C7444E100AD1EE0 /* ViewController.swift */,
+				191ABB5C1C7483B300A8A2DF /* LoggedInVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				19754F7C1C74487700AD1EE0 /* MaterialView.swift in Sources */,
 				19754F601C7444E100AD1EE0 /* ViewController.swift in Sources */,
 				19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */,
+				191ABB5D1C7483B300A8A2DF /* LoggedInVC.swift in Sources */,
 				19754F7F1C7448BC00AD1EE0 /* Contsants.swift in Sources */,
 				19754F811C744DF300AD1EE0 /* MaterialButton.swift in Sources */,
 			);

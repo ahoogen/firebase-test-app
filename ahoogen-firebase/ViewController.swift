@@ -31,9 +31,7 @@ class ViewController: UIViewController {
     @IBAction func fbBtnPressed(sender: UIButton!)
     {
         let facebookLogin = FBSDKLoginManager()
-        // facebookLogin.logInWithReadPermissions(<#T##permissions: [AnyObject]!##[AnyObject]!#>, fromViewController: <#T##UIViewController!#>, handler: <#T##FBSDKLoginManagerRequestTokenHandler!##FBSDKLoginManagerRequestTokenHandler!##(FBSDKLoginManagerLoginResult!, NSError!) -> Void#>)
-        // Call below is deprecated. Use the above form instead.
-        facebookLogin.logInWithReadPermissions(["email"]) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
+        facebookLogin.logInWithReadPermissions(["email"], fromViewController: self) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
             if facebookError != nil {
                 print("Facebook login failed. Error: \(facebookError)")
             } else {
@@ -52,14 +50,34 @@ class ViewController: UIViewController {
             }
         }
     }
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == SEGUE_LOGGED_IN {
+//            let vc = segue.destinationViewController as?
+//        }
+//    }
     
     @IBAction func attemptLogin(sender: UIButton!)
     {
         if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
             DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: { error, authData in
                 if error != nil {
-                    print(error.code)
                     print(error)
+                    if error.code == STATUS_ACCOUNT_NONEXIST {
+                        DataService.ds.ref_base.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
+                            if error != nil {
+                                self.showErrorAlert("Could not creat account", msg: "Problem creating account. Try something else")
+                            } else {
+                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
+                                DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: nil)
+                                self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                            }
+                        })
+                    } else if error.code == STATUS_INVALID_PASSWORD {
+                        self.showErrorAlert("Could not log in.", msg: "Check your username and password.")
+                    }
+                } else {
+                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                 }
             })
         } else {
@@ -69,7 +87,6 @@ class ViewController: UIViewController {
     
     func showErrorAlert(title: String, msg: String)
     {
-        UIAlertController.
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
         let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
         alert.addAction(action)
