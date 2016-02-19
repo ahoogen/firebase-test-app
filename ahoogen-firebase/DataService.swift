@@ -9,14 +9,35 @@
 import Foundation
 import Firebase
 
+let BASE_URL = "https://ahoogen.firebaseio.com"
 class DataService {
     static let ds = DataService()
     
-    var ref_base: Firebase {
-        get {
-            return _ref_base
-        }
+    private var _base = Firebase(url: BASE_URL)
+    private var _posts = Firebase(url: "\(BASE_URL)/posts")
+    private var _users = Firebase(url: "\(BASE_URL)/users")
+    
+    var BASE: Firebase {
+        return _base
     }
     
-    private var _ref_base = Firebase(url: "https://ahoogen.firebaseio.com")
+    var POSTS: Firebase {
+        return _posts
+    }
+    
+    var USERS: Firebase {
+        return _users
+    }
+    
+    var USER_CURRENT: Firebase {
+        let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as! String
+        let user = Firebase(url: "\(USERS)").childByAppendingPath(uid)
+        
+        return user
+    }
+    
+    func createFirebaseUser(uid: String, user: Dictionary<String, String>)
+    {
+        USERS.childByAppendingPath(uid).setValue(user)
+    }
 }

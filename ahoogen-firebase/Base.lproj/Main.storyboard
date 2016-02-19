@@ -18,6 +18,8 @@
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -188,62 +190,116 @@
                         <viewControllerLayoutGuide type="top" id="j7Q-o1-gDI"/>
                         <viewControllerLayoutGuide type="bottom" id="u5j-rB-yjI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ada-mE-VRG">
+                    <view key="view" contentMode="scaleToFill" id="Ada-mE-VRG" userLabel="FeedView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3b-LM-siq" customClass="MaterialView" customModule="ahoogen_firebase" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="560" height="49"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8II-FS-Qvt" userLabel="Add Post Stackview">
+                                        <rect key="frame" x="8" y="8" width="544" height="33"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Talk about your app!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZk-7M-BWU" customClass="MaterialTextField" customModule="ahoogen_firebase" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="417" height="33"/>
+                                                <color key="backgroundColor" white="0.87309493849999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="VTW-iI-AgE">
+                                                <rect key="frame" x="427" y="0.0" width="37" height="33"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" identifier="ImageSelector_Width" id="SAQ-Cc-YPB"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="q7D-Qm-as4" appends="YES" id="HRM-9h-9LB"/>
+                                                </connections>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlg-fQ-L8j" customClass="MaterialButton" customModule="ahoogen_firebase" customModuleProvider="target">
+                                                <rect key="frame" x="474" y="0.0" width="70" height="33"/>
+                                                <color key="backgroundColor" red="0.0" green="0.70588235294117641" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" identifier="PostBtn_Width" id="79O-eq-sNd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                <state key="normal" title="POST">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="postBtnPressed:" destination="DKQ-Zy-SPA" eventType="touchUpInside" id="5I3-Em-2Cy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="8II-FS-Qvt" secondAttribute="trailing" identifier="AddPostStackview_TrailingMargin" id="QsH-px-9rw"/>
+                                    <constraint firstAttribute="height" constant="49" identifier="AddPostStackview_Height" id="dMc-qE-sqz"/>
+                                    <constraint firstItem="8II-FS-Qvt" firstAttribute="top" secondItem="n3b-LM-siq" secondAttribute="topMargin" identifier="AddPostStackview_Top" id="kKs-xK-7VL"/>
+                                    <constraint firstItem="8II-FS-Qvt" firstAttribute="leading" secondItem="n3b-LM-siq" secondAttribute="leadingMargin" identifier="AddPostStackview_Leading" id="lvC-qq-Pcf"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="8II-FS-Qvt" secondAttribute="bottom" identifier="AddPostStackview_BottomMargin" id="mab-GC-Rj6"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="409" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ZS-Cp-iTd">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
-                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="129" width="560" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="409" id="gEH-ff-T8y" customClass="PostCell" customModule="ahoogen_firebase" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="409"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" id="gEH-ff-T8y" customClass="PostCell" customModule="ahoogen_firebase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="409"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gEH-ff-T8y" id="4g3-ab-567">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gEH-ff-T8y" id="4g3-ab-567" userLabel="PostContent">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="409"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Pf-MI-Hrx" userLabel="Container" customClass="MaterialView" customModule="ahoogen_firebase" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="8" width="560" height="393"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="08E-vY-Otz">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="08E-vY-Otz" userLabel="Post Stackview">
                                                             <rect key="frame" x="8" y="8" width="544" height="377"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Czp-C4-HRz">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Czp-C4-HRz">
                                                                     <rect key="frame" x="0.0" y="0.0" width="544" height="50"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="cZa-V4-0P6">
                                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="height" constant="50" id="Smq-nV-YPQ"/>
-                                                                                <constraint firstAttribute="width" constant="50" id="eAx-jX-Oub"/>
+                                                                                <constraint firstAttribute="height" constant="50" identifier="ProfileImg_Height" id="ddE-XP-nJK"/>
+                                                                                <constraint firstAttribute="width" constant="50" identifier="ProfileImg_Width" id="eAx-jX-Oub"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ahoogen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="pRP-U4-O7q">
-                                                                            <rect key="frame" x="60" y="0.0" width="101" height="50"/>
+                                                                            <rect key="frame" x="60" y="0.0" width="289" height="50"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                             <color key="textColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="VsT-gD-j4L">
-                                                                            <rect key="frame" x="171" y="0.0" width="202" height="50"/>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="VsT-gD-j4L">
+                                                                            <rect key="frame" x="359" y="0.0" width="75" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="75" id="9cg-dF-Gv0"/>
+                                                                            </constraints>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="c5L-ja-ybw">
-                                                                            <rect key="frame" x="383" y="0.0" width="162" height="50"/>
+                                                                            <rect key="frame" x="444" y="0.0" width="100" height="50"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="20000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3r6-LJ-jo1">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="25"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3r6-LJ-jo1">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
                                                                                     <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ca8-7K-d1t">
-                                                                                    <rect key="frame" x="0.0" y="25" width="162" height="25"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ca8-7K-d1t">
+                                                                                    <rect key="frame" x="0.0" y="25" width="100" height="25"/>
                                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="100" id="Ckx-Fl-0bz"/>
+                                                                            </constraints>
                                                                         </stackView>
                                                                     </subviews>
                                                                 </stackView>
@@ -251,7 +307,7 @@
                                                                     <rect key="frame" x="0.0" y="60" width="544" height="70"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Lul-TW-AZq"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" identifier="DescriptionTxt_Height" id="Lul-TW-AZq"/>
                                                                     </constraints>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -265,22 +321,24 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="08E-vY-Otz" secondAttribute="trailing" id="16r-YV-2Nu"/>
-                                                        <constraint firstItem="08E-vY-Otz" firstAttribute="leading" secondItem="2Pf-MI-Hrx" secondAttribute="leadingMargin" id="ipH-OW-aCY"/>
-                                                        <constraint firstItem="08E-vY-Otz" firstAttribute="top" secondItem="2Pf-MI-Hrx" secondAttribute="topMargin" id="lJh-cG-dpB"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="08E-vY-Otz" secondAttribute="bottom" id="yqX-9d-xoL"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="08E-vY-Otz" secondAttribute="trailing" identifier="PostStackview_TrailingMargin" id="16r-YV-2Nu"/>
+                                                        <constraint firstItem="08E-vY-Otz" firstAttribute="leading" secondItem="2Pf-MI-Hrx" secondAttribute="leadingMargin" identifier="PostStackview_Leading" id="ipH-OW-aCY"/>
+                                                        <constraint firstItem="08E-vY-Otz" firstAttribute="top" secondItem="2Pf-MI-Hrx" secondAttribute="topMargin" identifier="PostStackview_Top" id="lJh-cG-dpB"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="08E-vY-Otz" secondAttribute="bottom" identifier="PostStackview_BottomMargin" id="yqX-9d-xoL"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="2Pf-MI-Hrx" firstAttribute="top" secondItem="4g3-ab-567" secondAttribute="topMargin" id="FWN-Vz-ZG6"/>
-                                                <constraint firstItem="2Pf-MI-Hrx" firstAttribute="bottom" secondItem="4g3-ab-567" secondAttribute="bottomMargin" id="Jx2-A8-cSh"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="2Pf-MI-Hrx" secondAttribute="trailing" constant="-8" id="jqZ-Z3-Mbq"/>
-                                                <constraint firstItem="2Pf-MI-Hrx" firstAttribute="leading" secondItem="4g3-ab-567" secondAttribute="leadingMargin" constant="-8" id="lOl-NA-ZjA"/>
+                                                <constraint firstItem="2Pf-MI-Hrx" firstAttribute="top" secondItem="4g3-ab-567" secondAttribute="topMargin" identifier="PostContent_Top" id="FWN-Vz-ZG6"/>
+                                                <constraint firstItem="2Pf-MI-Hrx" firstAttribute="bottom" secondItem="4g3-ab-567" secondAttribute="bottomMargin" identifier="PostContent_Bottom" id="Jx2-A8-cSh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2Pf-MI-Hrx" secondAttribute="trailing" constant="-8" identifier="PostContent_TrailingMargin" id="jqZ-Z3-Mbq"/>
+                                                <constraint firstItem="2Pf-MI-Hrx" firstAttribute="leading" secondItem="4g3-ab-567" secondAttribute="leadingMargin" constant="-8" identifier="PostContent_Leading" id="lOl-NA-ZjA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="descriptionTxt" destination="w7F-Cf-SbL" id="iOt-1U-dVL"/>
+                                            <outlet property="likeImg" destination="VsT-gD-j4L" id="Z60-Ze-MBi"/>
                                             <outlet property="likesLbl" destination="3r6-LJ-jo1" id="149-MT-h8x"/>
                                             <outlet property="profileImg" destination="cZa-V4-0P6" id="nFh-1f-BWq"/>
                                             <outlet property="showcaseImg" destination="c67-TJ-1sb" id="cHW-6i-dDd"/>
@@ -291,20 +349,30 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2ZS-Cp-iTd" firstAttribute="top" secondItem="j7Q-o1-gDI" secondAttribute="bottom" id="Cz1-zO-Idf"/>
-                            <constraint firstItem="u5j-rB-yjI" firstAttribute="top" secondItem="2ZS-Cp-iTd" secondAttribute="bottom" id="RJ9-Pp-Zhb"/>
-                            <constraint firstItem="2ZS-Cp-iTd" firstAttribute="leading" secondItem="Ada-mE-VRG" secondAttribute="leadingMargin" id="jjD-Ql-lMn"/>
-                            <constraint firstItem="2ZS-Cp-iTd" firstAttribute="trailing" secondItem="Ada-mE-VRG" secondAttribute="trailingMargin" id="tsq-OZ-rpu"/>
+                            <constraint firstItem="n3b-LM-siq" firstAttribute="leading" secondItem="Ada-mE-VRG" secondAttribute="leadingMargin" identifier="FeedView_Leading" id="EUp-H3-Jyi"/>
+                            <constraint firstItem="2ZS-Cp-iTd" firstAttribute="top" secondItem="n3b-LM-siq" secondAttribute="bottom" constant="8" identifier="FeedView_TableTop" id="JpK-Sa-kL5"/>
+                            <constraint firstItem="u5j-rB-yjI" firstAttribute="top" secondItem="2ZS-Cp-iTd" secondAttribute="bottom" identifier="FeedView_TableBottom" id="RJ9-Pp-Zhb"/>
+                            <constraint firstItem="n3b-LM-siq" firstAttribute="top" secondItem="j7Q-o1-gDI" secondAttribute="bottom" constant="8" identifier="FeedView_Top" id="XUd-r7-cUl"/>
+                            <constraint firstItem="n3b-LM-siq" firstAttribute="trailing" secondItem="Ada-mE-VRG" secondAttribute="trailingMargin" identifier="FeedView_Trailing" id="gUC-LH-ggd"/>
+                            <constraint firstItem="2ZS-Cp-iTd" firstAttribute="leading" secondItem="Ada-mE-VRG" secondAttribute="leadingMargin" identifier="FeedView_TableLeading" id="jjD-Ql-lMn"/>
+                            <constraint firstItem="2ZS-Cp-iTd" firstAttribute="trailing" secondItem="Ada-mE-VRG" secondAttribute="trailingMargin" identifier="FeedView_TableTrailing" id="tsq-OZ-rpu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6aX-O2-8z5"/>
                     <connections>
+                        <outlet property="imageSelectorImg" destination="VTW-iI-AgE" id="COx-Gx-1NA"/>
+                        <outlet property="postField" destination="SZk-7M-BWU" id="Jf6-xp-SsU"/>
                         <outlet property="tableView" destination="2ZS-Cp-iTd" id="75I-Gm-jLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8V-75-qmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="q7D-Qm-as4">
+                    <connections>
+                        <action selector="selectImage:" destination="DKQ-Zy-SPA" id="5zy-Ip-FpY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1668" y="211"/>
+            <point key="canvasLocation" x="1561" y="211"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A3Y-jX-vFD">
@@ -327,6 +395,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="50" height="50"/>
         <image name="code-icon-logo" width="318" height="281"/>
         <image name="fb-icon" width="65" height="65"/>
         <image name="heart-empty" width="150" height="147"/>

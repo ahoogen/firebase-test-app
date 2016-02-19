@@ -38,11 +38,14 @@ class ViewController: UIViewController {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 print("Successfully logged in with facebook. \(accessToken)")
                 
-                DataService.ds.ref_base.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                DataService.ds.BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
                     if error != nil {
                         print("Login failed. \(error)")
                     } else {
                         print("Logged In! \(authData)")
+                        
+                        let user = ["provider": authData.provider!, "blah": "test"]
+                        DataService.ds.createFirebaseUser(authData.uid, user: user)
                         NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey:  KEY_UID)
                         self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                     }
@@ -50,26 +53,23 @@ class ViewController: UIViewController {
             }
         }
     }
-//    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == SEGUE_LOGGED_IN {
-//            let vc = segue.destinationViewController as?
-//        }
-//    }
     
     @IBAction func attemptLogin(sender: UIButton!)
     {
         if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
-            DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: { error, authData in
+            DataService.ds.BASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
                 if error != nil {
                     print(error)
                     if error.code == STATUS_ACCOUNT_NONEXIST {
-                        DataService.ds.ref_base.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
+                        DataService.ds.BASE.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
                             if error != nil {
                                 self.showErrorAlert("Could not creat account", msg: "Problem creating account. Try something else")
                             } else {
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
-                                DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: nil)
+                                DataService.ds.BASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
+                                    let user = ["provider": authData.provider!, "blah": "emailtest"]
+                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
+                                })
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }
                         })

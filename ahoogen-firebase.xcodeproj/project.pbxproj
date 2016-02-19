@@ -27,6 +27,7 @@
 		19754F8A1C745A3400AD1EE0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19754F871C745A3400AD1EE0 /* FBSDKLoginKit.framework */; };
 		19A026B51C748F880024A8FE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A026B41C748F880024A8FE /* FeedVC.swift */; };
 		19A026B71C7490960024A8FE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A026B61C7490960024A8FE /* PostCell.swift */; };
+		19A026B91C75640D0024A8FE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A026B81C75640D0024A8FE /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		19754F871C745A3400AD1EE0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		19A026B41C748F880024A8FE /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		19A026B61C7490960024A8FE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		19A026B81C75640D0024A8FE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		629947DE380A4E84B45757CB /* Pods-ahoogen-firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahoogen-firebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-ahoogen-firebase/Pods-ahoogen-firebase.release.xcconfig"; sourceTree = "<group>"; };
 		A124A32B3E4C4E13B1265588 /* Pods-ahoogen-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahoogen-firebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ahoogen-firebase/Pods-ahoogen-firebase.debug.xcconfig"; sourceTree = "<group>"; };
 		BB906BA60C3E1AC2F7A9F856 /* Pods_ahoogen_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ahoogen_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 		19754F7A1C74451F00AD1EE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				19A026B81C75640D0024A8FE /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				19754F5E1C7444E100AD1EE0 /* AppDelegate.swift in Sources */,
 				19754F7F1C7448BC00AD1EE0 /* Contsants.swift in Sources */,
 				19754F811C744DF300AD1EE0 /* MaterialButton.swift in Sources */,
+				19A026B91C75640D0024A8FE /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
