@@ -29,7 +29,7 @@ let STATUS_ACCOUNT_NONEXIST = -8
 let STATUS_INVALID_PASSWORD = -6
 
 // External Resources
-let IMAGE_SHACK_API_KEY: String = "12DJKPSU5fc3afbd01b1630cc718cae3043220f3"
+let IMAGE_SHACK_API_KEY: String = ""
 
 // Constraint debug output
 extension NSLayoutConstraint {
